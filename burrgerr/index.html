@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Images/fav1.webp" type="image/x-icon">
+    <!-- BOOTSTRAP -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Burrgerr</title>
+</head>
+
+<body>
+    <div class="hero_section">
+              <div class="cartModal">
+                <!-- Button trigger modal -->
+                       <div class="cartIcon">
+                         <i class="fa fa-shopping-cart" style="font-size:36px" type="button" data-bs-toggle="modal" data-bs-target="#secondModal"></i>
+                            <div class="totalItemsInCart">
+                             0
+                            </div>
+                            
+                            
+                        </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="secondModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Shopping <span>Cart</span></h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                               <!-- modal body -->
+                               <div class="cartItems">
+                                    <div>
+                                        <div class="content">
+                                            <div>
+                                               
+                                            </div>
+                                            <div class="info">
+                                                
+                                            </div>
+                                            <div class="units">
+                                                
+                                            </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="cart-footer text-center">
+                                    <div class="subtotal">
+                                        SUBTOTAL (0 items): $0
+                                    </div>
+                                </div>
+                               <!-- End of modal body -->
+                               
+                            </div>
+                            <div class="modal-footer">
+                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#thirdModal" data-bs-dismiss="modal">Proceed to Delivery</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- third Modal -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="fourthModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel"><span>Summary</span> of Your Order</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="location text-center">
+                                        
+                                    </div>
+                                        <div class="summary">
+                                         
+                                        </div>
+                                        <div class="total">
+                                            
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary lost" onclick="sendAlert()">Submit</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    <!-- End of third modal -->
+                    <!-- FOURTH MODAL -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="thirdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delivery Location</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                 <!-- modal body -->
+                                 <div class="col">
+                                    <form id="form">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter name...">
+                                        <label for="location">Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter email...">
+                                        <label for="location">Location</label>
+                                        <input id="location" type="text" class="form-control" placeholder="Enter location...">
+                                        <button class="btn btn-secondary mt-3">Submit</button>
+                                    </form>
+                                </div>
+                                 <!-- end of modal body -->
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#fourthModal" data-bs-dismiss="modal">Proceed to checkout</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    <!-- END OF FOURTH MODAL -->
+              </div>
+              
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                </div>
+            </div>
+            <div class="row love">
+                <div class="col">
+                    <h1>You would love<br> our <span>hot burger</span></h1>
+                    <p>Get 10% instant off for all order and $100 signup bonus today for new registration</p>
+                    <img class="eat" src="./Images/eating.svg" alt="appstore">
+                </div>
+                <div class="col">
+                    <div class="underline"></div><img class="img img-fluid" src="./Images/burger1.png" alt="burger">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu_section">
+        <div class="container">
+            <h1 class="text-center pt-3">Coming <span>Soon</span></h1>
+            <div class="contain">
+                <div class="col">
+                    <div class="imgDiv">
+                        <img src="./Images/Img2.jpg" alt="">
+                        <h3 class="font"><span>25th December</span></h3>
+                        <h4 class="font">Special burger party</h4>
+                        <p class="free">Get Free Home Delivery</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="imgDiv">
+                        <img src="./Images/Img3.jpg" alt="">
+                        <h3 class="font"><span>10% off</span></h3>
+                        <h4 class="font">Evert Burger Today</h4>
+                        <p class="free">Get Free Home Delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="delivery_section">
+        <h1 class="text-center pt-5"><span>Fresh</span> Burger. Delivered.</h1>
+        <div class="mainDiv">
+            <div class="personDiv">
+                <img src="./Images/person.png" alt="">
+            </div>
+            <div class="itemDiv">
+                <div class="item">
+                    <div>
+                        <i class="fa fa-spoon" style="font-size:36px"></i>
+                    </div>
+                    <div>
+                        <h4>Order food from our menu</h4>
+                        <p>Order a burger of your choice from our menu</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <i class="fa fa-money" style="font-size:24px"></i>
+                    </div>
+
+                    <div>
+                        <h4>Pay Your Food bill</h4>
+                        <p>You can use our online payment medium for convinence</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <i class="fa fa-car" style="font-size:24px"></i>
+                    </div>
+                    <div>
+                        <h4>Get delivery within 50 mins</h4>
+                        <p>Timely delivery from our experienced delivery personnel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cto_section">
+        <h2>Best Cheese Burger Available in<br> town by foodota</h2>
+        <p>You long to have a taste of the best burgers in town, look no further.</p>
+
+        <!-- Modal location -->
+        <!-- Button trigger modal -->
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Order Here
+                </button>
+
+                <button type="button"><a href="./custom.html" style="color: azure;">Build one!</a></button>
+
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Shopping Cart</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+  
+                            <div class="row products">
+                              <!-- render products here -->
+                            </div>
+                    
+                        </div>
+                          </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+
+        <!-- End of modal -->
+
+    </div>
+    <div class="contact_section">
+        <div class="container">
+            <h1 class="text-center">Contact <span>us</span></h1>
+            <div class="contact_minisection">
+                <div class="input">
+                    <h3>Have any <span>Q</span>uestions?</h3>
+                    <label for="name">Your Name</label><br>
+                    <input type="text"><br>
+                    <label for="email">Your Email</label><br>
+                    <input type="text"><br>
+                    <label for="subject">Subject</label><br>
+                    <input type="text"><br><br>
+                    <textarea name="" id="" cols="30" rows="5"></textarea><br>
+                    <button>Send message</button>
+                </div>
+                <div class="undraw">
+                    <img src="./Images/contact.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_section">
+        <div class="container">
+        
+            <p class="copy">©2021 All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <script src="products.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

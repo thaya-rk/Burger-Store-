@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brrrgrrr - Burger Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Brrrgrrr</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="burger-builder">
+            <h2>Build Your Burger</h2>
+            <div class="ingredients">
+                <button class="ingredient" data-price="3.50">Bun</button>
+                <button class="ingredient" data-price="4.00">Patty</button>
+                <button class="ingredient" data-price="1.00">Lettuce</button>
+                <button class="ingredient" data-price="1.00">Tomato</button>
+                <!-- Add more ingredients as needed -->
+            </div>
+            <div class="burger-display">
+                <div class="burger">
+                </div>
+                <p>Total Price: $<span id="total-price">0.00</span></p>
+            </div>
+        </section>
+        <div class="burger-actions">
+            <button id="add-ingredient">Add Ingredient</button>
+            <button id="remove-ingredient">Remove Ingredient</button>
+        </div>
+    
+         
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 Brrrgrrr. All rights reserved.</p>
+    </footer>
+  
+    <script src="script.js"></script>
+</body>
+</html>
